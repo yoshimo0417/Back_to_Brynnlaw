@@ -35,7 +35,7 @@ ALWAYS
   //INCLUDE ~%MOD_FOLDER%/handle_charsets.tpa~
 
   // No exception, everything needs to be converted
-  ACTION_DEFINE_ARRAY O#noconvert BEGIN END
+  ACTION_DEFINE_ARRAY O#noconvert BEGIN SETUP-osx SETUP-unix SETUP-win32 END
 
   // Only setup-Mod.tra needs to be reloaded
   ACTION_DEFINE_ARRAY O#reload BEGIN Setup-BackBrynnlaw END
@@ -57,7 +57,7 @@ AUTO_TRA ~BackBrynnlaw/%s~
 LANGUAGE ~English~ ~English~ ~BackBrynnlaw/English/Setup-BackBrynnlaw.tra~
 LANGUAGE ~Russian~ ~Russian~ ~BackBrynnlaw/Russian/Setup-BackBrynnlaw.tra~
 LANGUAGE ~Deutsch~ ~Deutsch~ ~BackBrynnlaw/Deutsch/Setup-BackBrynnlaw.tra~
-LANGUAGE ~Chinese~ ~Schinese~ ~BackBrynnlaw/Schinese/Setup-BackBrynnlaw.tra~
+LANGUAGE ~Chinese~ ~Schinese~ ~BackBrynnlaw/Schinese/Setup-%WEIDU_OS%.tra~
 LANGUAGE ~French~ ~French~ ~BackBrynnlaw/French/Setup-BackBrynnlaw.tra~
 LANGUAGE ~Polish~ ~Polish~ ~BackBrynnlaw/Polish/Setup-BackBrynnlaw.tra~
 
